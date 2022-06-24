@@ -11,5 +11,6 @@ def rename_file(dir, src, dest):
     os.rename(src, dest)
 
 
-if __name__ == "__main__":
-    rename_file(os.curdir, 'test.txt', 'supertest.txt')
+def create_file(dir, name):
+    name = os.path.join(dir, name)
+    open(name, "w").close()
